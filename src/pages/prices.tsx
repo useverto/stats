@@ -3,6 +3,7 @@ import { exchangeWallet } from "../utils/constants";
 import moment from "moment";
 import { useRouter } from "next/router";
 import useSWR from "swr";
+import { Line } from "react-chartjs-2";
 
 const grabPrices = async (token) => {
   const gensisTxs = (
@@ -156,9 +157,48 @@ const Prices = () => {
   // @ts-ignore
   if (!data) return <p>loading ...</p>;
 
-  console.log(data);
-
-  return <p>nothing yet ...</p>;
+  return (
+    <Line
+      data={{
+        labels: data.dates,
+        datasets: [
+          {
+            data: data.prices,
+            fill: false,
+            borderColor: function (context) {
+              let gradient = context.chart.ctx.createLinearGradient(
+                0,
+                0,
+                context.chart.width,
+                context.chart.height
+              );
+              gradient.addColorStop(0, "#E698E8");
+              gradient.addColorStop(1, "#8D5FBC");
+              return gradient;
+            },
+            pointBackgroundColor: function (context) {
+              let gradient = context.chart.ctx.createLinearGradient(
+                0,
+                0,
+                context.chart.width,
+                context.chart.height
+              );
+              gradient.addColorStop(0, "#E698E8");
+              gradient.addColorStop(1, "#8D5FBC");
+              return gradient;
+            },
+          },
+        ],
+      }}
+      options={{
+        legend: { display: false },
+        scales: {
+          xAxes: [{ gridLines: { display: false } }],
+          yAxes: [{ gridLines: { display: false } }],
+        },
+      }}
+    />
+  );
 };
 
 export default Prices;
