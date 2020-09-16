@@ -1,43 +1,12 @@
+import { getTradingPosts } from "../utils/get_trading_posts";
 import { query } from "../utils/gql";
-import { exchangeWallet } from "../utils/constants";
 import moment from "moment";
 import { useRouter } from "next/router";
 import useSWR from "swr";
 import { Line } from "react-chartjs-2";
 
 const grabPrices = async (token) => {
-  const gensisTxs = (
-    await query({
-      query: `
-    query($recipients: [String!]) {
-      transactions(
-        recipients: $recipients
-        tags: [
-          { name: "Exchange", values: "Verto" }
-          { name: "Type", values: "Genesis" }
-        ]
-      ) {
-        edges {
-          node {
-            owner {
-              address
-            }
-          }
-        }
-      }
-    }`,
-      variables: {
-        recipients: [exchangeWallet],
-      },
-    })
-  ).data.transactions.edges;
-
-  let posts: string[] = [];
-  gensisTxs.map((tx) => {
-    if (!posts.find((addr) => addr === tx.node.owner.address)) {
-      posts.push(tx.node.owner.address);
-    }
-  });
+  const posts = await getTradingPosts();
 
   const maxInt = 2147483647;
 
