@@ -114,7 +114,7 @@ const grabPrices = async (token) => {
   return { prices: prices.reverse(), dates: days.reverse() };
 };
 
-const Prices = () => {
+const Price = () => {
   const router = useRouter();
   const token = router.query.token;
 
@@ -170,4 +170,4 @@ const Prices = () => {
   );
 };
 
-export default Prices;
+export default Price;
