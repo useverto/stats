@@ -31,4 +31,4 @@ A quickstart guide to embedding Verto Trading Statistics into your own site is c
 ## License
 
 The code contained within this repository is licensed under the MIT license.
-See [`./LICENSE`](../LICENSE) for more information.
+See [`./LICENSE`](./LICENSE) for more information.
