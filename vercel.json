@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/price/(.*)",
+      "destination": "https://arweave.net/undefined/price.html?token=$1"
+    },
+    {
+      "source": "/volume/(.*)",
+      "destination": "https://arweave.net/undefined/volume.html?token=$1"
+    }
+  ]
+}

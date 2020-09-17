@@ -6,7 +6,12 @@
   "scripts": {
     "dev": "next dev",
     "export": "next build && next export",
-    "fmt": "prettier --write ."
+    "fmt": "prettier --write .",
+    "vc": "vercel",
+    "vc:prod": "vercel --prod",
+    "ar:pkg": "arweave package ./out/price.html ./ar/price.html && arweave package ./out/volume.html ./ar/volume.html",
+    "ar:deploy": "yarn ar: pkg && arweave deploy-dir ./ar --force-skip-confirmation --key-file",
+    "deploy": "echo \"yarn ar:deploy && get TxID && node vercel {{ TxID }} => yarn vc:prod\""
   },
   "dependencies": {
     "chart.js": "^2.9.3",
@@ -20,7 +25,9 @@
   "devDependencies": {
     "@types/node": "^14.10.1",
     "@types/react": "^16.9.49",
+    "arweave-deploy": "^1.9.1",
     "prettier": "^2.1.1",
-    "typescript": "^4.0.2"
+    "typescript": "^4.0.2",
+    "vercel": "^20.1.0"
   }
 }
