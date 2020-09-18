@@ -169,10 +169,9 @@ const Price = () => {
           xAxes: [{ gridLines: { display: false } }],
           yAxes: [
             {
-              gridLines: { display: false, drawOnChartArea: false },
+              gridLines: { display: false },
               ticks: {
-                min: 0,
-                max: parseFloat((Math.max(...data.prices) + 0.001).toFixed(4)),
+                beginAtZero: true,
               },
             },
           ],
