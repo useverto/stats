@@ -105,7 +105,11 @@ const grabPrices = async (token) => {
       }
     }
 
-    prices.push(dayPrices.reduce((a, b) => a + b, 0) / dayPrices.length);
+    if (dayPrices.length === 0) {
+      prices.push(prices[prices.length - 1]);
+    } else {
+      prices.push(dayPrices.reduce((a, b) => a + b, 0) / dayPrices.length);
+    }
     days.push(low.format("MMM DD"));
 
     high = low;
