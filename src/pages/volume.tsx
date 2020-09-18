@@ -133,6 +133,8 @@ const Volume = () => {
         ],
       }}
       options={{
+        responsive: true,
+        maintainAspectRatio: false,
         legend: { display: false },
         scales: {
           xAxes: [{ gridLines: { display: false } }],

@@ -164,6 +164,8 @@ const Price = () => {
         ],
       }}
       options={{
+        responsive: true,
+        maintainAspectRatio: false,
         legend: { display: false },
         scales: {
           xAxes: [{ gridLines: { display: false } }],
