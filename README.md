@@ -20,7 +20,43 @@ You can access the code for trading posts [here](https://github.com/useverto/tra
 
 ## Guide
 
-A quickstart guide to embedding Verto Trading Statistics into your own site is coming soon!
+### `/price`
+
+This endpoint accepts a `token` in the form of a url query.
+
+You can pass it in as follows: `/price?token=<MY_TOKEN_ID_HERE>`.
+
+A token is a valid transaction ID for your PST smart contract.
+
+Once you visit this url, you will be given a graph of your PST price over time.
+
+You can then imbed this using an iframe as follows:
+
+```html
+<iframe
+  src="https://stats.verto.exchange/price?token=<MY_TOKEN_ID_HERE>"
+  title="Token Price"
+></iframe>
+```
+
+### `/volume`
+
+This endpoint accepts a `token` in the form of a url query.
+
+You can pass it in as follows: `/volume?token=<MY_TOKEN_ID_HERE>`.
+
+A token is a valid transaction ID for your PST smart contract.
+
+Once you visit this url, you will be given a graph of how much of that PST has gone through the Verto Exchange Network.
+
+You can then imbed this using an iframe as follows:
+
+```html
+<iframe
+  src="https://stats.verto.exchange/volume?token=<MY_TOKEN_ID_HERE>"
+  title="Token Volume"
+></iframe>
+```
 
 ## Special Thanks
 
