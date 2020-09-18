@@ -1,12 +1,12 @@
 {
   "rewrites": [
     {
-      "source": "/price/(.*)",
-      "destination": "https://ben7jugkpupg3kgqysrkkvupwfzbp67tvqubbbtgooujdsumkgwq.arweave.net/CRv00Mp9Hm2o0MSipVaPsXIX-_OsKBCGZnOokcqMUa0?token=$1"
+      "source": "/price",
+      "destination": "https://ben7jugkpupg3kgqysrkkvupwfzbp67tvqubbbtgooujdsumkgwq.arweave.net/CRv00Mp9Hm2o0MSipVaPsXIX-_OsKBCGZnOokcqMUa0"
     },
     {
-      "source": "/volume/(.*)",
-      "destination": "https://3k7fcczg4mpkutvboogrb7xsid32eg7izxw3is4os2y2ui2xlqma.arweave.net/2r5RCybjHqpOoXONEP7yQPeiG-jN7bRLjpaxqiNXXBg?token=$1"
+      "source": "/volume",
+      "destination": "https://3k7fcczg4mpkutvboogrb7xsid32eg7izxw3is4os2y2ui2xlqma.arweave.net/2r5RCybjHqpOoXONEP7yQPeiG-jN7bRLjpaxqiNXXBg"
     }
   ]
 }
