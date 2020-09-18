@@ -30,7 +30,7 @@ A token is a valid transaction ID for your PST smart contract.
 
 Once you visit this url, you will be given a graph of your PST price over time.
 
-You can then imbed this using an iframe as follows:
+You can then embed this using an iframe as follows:
 
 ```html
 <iframe
@@ -49,7 +49,7 @@ A token is a valid transaction ID for your PST smart contract.
 
 Once you visit this url, you will be given a graph of how much of that PST has gone through the Verto Exchange Network.
 
-You can then imbed this using an iframe as follows:
+You can then embed this using an iframe as follows:
 
 ```html
 <iframe
