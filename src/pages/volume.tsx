@@ -1,81 +1,7 @@
-import { getTradingPosts } from "../utils/get_trading_posts";
-import { query } from "../utils/gql";
-import moment from "moment";
 import { useRouter } from "next/router";
 import useSWR from "swr";
+import Verto from "@verto/lib";
 import { Line } from "react-chartjs-2";
-
-const grabVolume = async (token) => {
-  const posts = await getTradingPosts();
-
-  const maxInt = 2147483647;
-
-  const orderTxs = (
-    await query({
-      query: `
-    query($recipients: [String!]) {
-      transactions(
-        recipients: $recipients
-        tags: [
-          { name: "Exchange", values: "Verto" }
-          { name: "Type", values: "Sell" }
-          { name: "Contract", values: "${token}" }
-        ]
-        first: ${maxInt}
-      ) {
-        edges {
-          node {
-            block {
-              timestamp
-            }
-            tags {
-              name
-              value
-            }
-          }
-        }
-      }
-    }`,
-      variables: {
-        recipients: posts,
-      },
-    })
-  ).data.transactions.edges;
-
-  let orders: { amnt: number; timestamp: number }[] = [];
-  orderTxs.map((order) => {
-    orders.push({
-      amnt: JSON.parse(
-        order.node.tags.find((tag) => tag.name === "Input").value
-      ).qty,
-      timestamp: order.node.block.timestamp,
-    });
-  });
-
-  let volume: number[] = [];
-  let days: string[] = [];
-
-  if (orders.length > 0) {
-    let high = moment().add(1, "days").hours(0).minutes(0).seconds(0);
-    while (high.unix() >= orders[orders.length - 1].timestamp) {
-      let sum = 0;
-
-      const low = high.clone().subtract(1, "days");
-      orders.map((order) => {
-        if (order.timestamp <= high.unix() && order.timestamp >= low.unix()) {
-          sum += order.amnt;
-        }
-      });
-
-      volume.push(sum);
-      days.push(low.format("MMM DD"));
-
-      high = low;
-    }
-  }
-
-  return { volume: volume.reverse(), dates: days.reverse() };
-};
 
 const Volume = () => {
   const router = useRouter();
@@ -83,7 +9,7 @@ const Volume = () => {
 
   if (!token || token === "") return <p>no token.</p>;
 
-  const { data, error } = useSWR([token], grabVolume);
+  const { data, error } = useSWR([token], new Verto().volume);
 
   if (error) return <p>failed to load.</p>;
   // @ts-ignore
