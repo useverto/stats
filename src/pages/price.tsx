@@ -15,6 +15,10 @@ const Price = () => {
   // @ts-ignore
   if (!data) return <p>loading ...</p>;
 
+  if (data.prices.every((price) => isNaN(price))) {
+    return <p>no price data.</p>;
+  }
+
   return (
     <Line
       data={{

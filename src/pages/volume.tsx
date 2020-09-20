@@ -15,6 +15,10 @@ const Volume = () => {
   // @ts-ignore
   if (!data) return <p>loading ...</p>;
 
+  if (data.volume.length === 0 && data.dates.length === 0) {
+    return <p>no trading volume.</p>;
+  }
+
   return (
     <Line
       data={{
