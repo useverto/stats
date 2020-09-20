@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import useSWR from "swr";
+import { useState, useEffect } from "react";
 import Verto from "@verto/lib";
 import { Line } from "react-chartjs-2";
 
@@ -9,10 +9,12 @@ const Volume = () => {
 
   if (!token || token === "") return <p>no token.</p>;
 
-  const { data, error } = useSWR([token], new Verto().volume);
+  const [data, setData] = useState(null);
 
-  if (error) return <p>failed to load.</p>;
-  // @ts-ignore
+  useEffect(() => {
+    new Verto().volume(token).then((res) => setData(res));
+  }, []);
+
   if (!data) return <p>loading ...</p>;
 
   if (data.volume.length === 0 && data.dates.length === 0) {

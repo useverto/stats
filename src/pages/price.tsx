@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import useSWR from "swr";
+import { useState, useEffect } from "react";
 import Verto from "@verto/lib";
 import { Line } from "react-chartjs-2";
 
@@ -9,10 +9,12 @@ const Price = () => {
 
   if (!token || token === "") return <p>no token.</p>;
 
-  const { data, error } = useSWR([token], new Verto().price);
+  const [data, setData] = useState(null);
 
-  if (error) return <p>failed to load.</p>;
-  // @ts-ignore
+  useEffect(() => {
+    new Verto().price(token).then((res) => setData(res));
+  }, []);
+
   if (!data) return <p>loading ...</p>;
 
   if (data.prices.every((price) => isNaN(price))) {
