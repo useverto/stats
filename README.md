@@ -39,6 +39,15 @@ You can then embed this using an iframe as follows:
 ></iframe>
 ```
 
+Alternatively, if you'd like to embed a direct Arweave url, you can use:
+
+```html
+<iframe
+  src="https://ben7jugkpupg3kgqysrkkvupwfzbp67tvqubbbtgooujdsumkgwq.arweave.net/CRv00Mp9Hm2o0MSipVaPsXIX-_OsKBCGZnOokcqMUa0?token=<MY_TOKEN_ID_HERE>"
+  title="Token Price"
+></iframe>
+```
+
 ### `/volume`
 
 This endpoint accepts a `token` in the form of a url query.
@@ -54,6 +63,15 @@ You can then embed this using an iframe as follows:
 ```html
 <iframe
   src="https://stats.verto.exchange/volume?token=<MY_TOKEN_ID_HERE>"
+  title="Token Volume"
+></iframe>
+```
+
+Alternatively, if you'd like to embed a direct Arweave url, you can use:
+
+```html
+<iframe
+  src="https://3k7fcczg4mpkutvboogrb7xsid32eg7izxw3is4os2y2ui2xlqma.arweave.net/2r5RCybjHqpOoXONEP7yQPeiG-jN7bRLjpaxqiNXXBg?token=<MY_TOKEN_ID_HERE>"
   title="Token Volume"
 ></iframe>
 ```
