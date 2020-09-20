@@ -43,7 +43,7 @@ Alternatively, if you'd like to embed a direct Arweave url, you can use:
 
 ```html
 <iframe
-  src="https://ben7jugkpupg3kgqysrkkvupwfzbp67tvqubbbtgooujdsumkgwq.arweave.net/CRv00Mp9Hm2o0MSipVaPsXIX-_OsKBCGZnOokcqMUa0?token=<MY_TOKEN_ID_HERE>"
+  src="https://rhzpx2d2zkgeaif5v3yfbpoz2f5vbuagzzptgl6kp2bslebynwpa.arweave.net/ifL76HrKjEAgva7wUL3Z0XtQ0AbOXzMvyn6DJZA4bZ4?token=<MY_TOKEN_ID_HERE>"
   title="Token Price"
 ></iframe>
 ```
@@ -71,7 +71,7 @@ Alternatively, if you'd like to embed a direct Arweave url, you can use:
 
 ```html
 <iframe
-  src="https://3k7fcczg4mpkutvboogrb7xsid32eg7izxw3is4os2y2ui2xlqma.arweave.net/2r5RCybjHqpOoXONEP7yQPeiG-jN7bRLjpaxqiNXXBg?token=<MY_TOKEN_ID_HERE>"
+  src="https://gtmslvd4rennlurd3gdgt5q6n63nsxkjv4rnvawjpdqy6c3ul7xa.arweave.net/NNkl1HyJGtXSI9mGafYeb7bZXUmvItqCyXjhjwt0X-4?token=<MY_TOKEN_ID_HERE>"
   title="Token Volume"
 ></iframe>
 ```
