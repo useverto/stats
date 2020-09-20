@@ -25,3 +25,14 @@ body {
 ::-moz-selection {
   background-color: #b075cd;
 }
+
+a {
+  color: #b075cd;
+  text-decoration: underline;
+}
+a::selection {
+  color: #000;
+}
+a::-moz-selection {
+  color: #000;
+}
