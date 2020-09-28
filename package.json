@@ -10,7 +10,7 @@
     "deploy": "yarn export && arweave deploy ./out/index.html --package --key-file arweave.json --force-skip-confirmation && arweave deploy ./out/price.html --package --key-file arweave.json --force-skip-confirmation && arweave deploy ./out/volume.html --package --key-file arweave.json --force-skip-confirmation"
   },
   "dependencies": {
-    "@verto/lib": "^0.0.1-alpha.1",
+    "@verto/lib": "^0.2.0-alpha.1",
     "chart.js": "^2.9.3",
     "next": "^9.5.3",
     "react": "^16.13.1",

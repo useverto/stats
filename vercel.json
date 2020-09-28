@@ -2,15 +2,15 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "https://namkz2ffryr3cajpohcs6az4rq3vxovgbjaxf3hgfogztdfqrp3a.arweave.net/aBis6KWOI7EBL3HFLwM8jDdbuqYKQXLs5iuNmYywi_Y"
+      "destination": "https://gydfnfupmykgzw3sje23b7e75mdih4vixrdr4lqvd2egwbqxlbpa.arweave.net/NgZWlo9mFGzbckk1sPyf6waD8qi8Rx4uFR6IawYXWF4"
     },
     {
       "source": "/price",
-      "destination": "https://sw6w75qajmpfz6ejcyygix4lqprtrhiq4ieqlsk7fthhwtx7fapa.arweave.net/lb1v9gBLHlz4iRYwZF-Lg-M4nRDiCQXJXyzOe07_KB4"
+      "destination": "https://ycjlz25yapao3jtgaf26pebixw7kyt6i2ejazz6cwaqmy6zur6dq.arweave.net/wJK867gDwO2mZgF155Aovb6sT8jREgznwrAgzHs0j4c"
     },
     {
       "source": "/volume",
-      "destination": "https://ypxhi2bmkoqsrinuvy5a4jp4iqkgqxemge3dqosl2eqhakpyeyvq.arweave.net/w-50aCxToSihtK46DiX8RBRoXIwxNjg6S9EgcCn4Jis"
+      "destination": "https://v53vgxis7k6b7lf6jchfrjx36zgf4tbgr6nlardn5ezkw3db3lqa.arweave.net/r3dTXRL6vB-svkiOWKb79kxeTCaPmrBEbekyq2xh2uA"
     }
   ]
 }
