@@ -21,6 +21,9 @@ const Home = () => {
       >
         stats.verto.exchange
       </h1>
+      <p>
+        AR: <a href="/ar">volume</a>
+      </p>
       {!data && <p>loading ...</p>}
       {data &&
         data.map((pst) => (

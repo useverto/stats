@@ -1063,10 +1063,10 @@
     "@types/prop-types" "*"
     csstype "^3.0.2"
 
-"@verto/lib@^0.2.0-alpha.1":
-  version "0.2.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/@verto/lib/-/lib-0.2.0-alpha.1.tgz#fa2fe83c863fa3e4b6588d5d853d13693e310ff0"
-  integrity sha512-3TTMb9bcRQ+nPaYLUdSLKRyEcvnh4khptcUW9Ae6Mza+5nECwnbjewvMO+JCZVVWF2YWHg66tp2W0Sn9pw2acw==
+"@verto/lib@^0.3.0-alpha.6":
+  version "0.3.0-alpha.6"
+  resolved "https://registry.yarnpkg.com/@verto/lib/-/lib-0.3.0-alpha.6.tgz#8f53af30670c85d28d46feb89a3a47b4d230154f"
+  integrity sha512-a1SPedaeeVx0CNwS/XEnK4TLuoghjb9CZQZS2cv4ZsLyoZTxor9O8kmUHiObFy+VZqKQEatAr6Eaty9mfTf6YQ==
   dependencies:
     arweave "^1.9.1"
     community-js "^1.0.15"
