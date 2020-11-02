@@ -68,6 +68,9 @@ const Volume = () => {
         responsive: true,
         maintainAspectRatio: false,
         legend: { display: false },
+        elements: { point: { radius: 0 } },
+        tooltips: { mode: "index", intersect: false },
+        hover: { mode: "nearest", intersect: true },
         scales: {
           xAxes: [{ gridLines: { display: false } }],
           yAxes: [{ gridLines: { display: false } }],
