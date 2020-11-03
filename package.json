@@ -10,12 +10,12 @@
     "deploy": "yarn export && arweave deploy ./out/index.html --package --key-file arweave.json --force-skip-confirmation && arweave deploy ./out/ar.html --package --key-file arweave.json --force-skip-confirmation && arweave deploy ./out/price.html --package --key-file arweave.json --force-skip-confirmation && arweave deploy ./out/volume.html --package --key-file arweave.json --force-skip-confirmation"
   },
   "dependencies": {
-    "@verto/lib": "^0.3.0-alpha.6",
+    "@verto/lib": "^0.6.2",
     "chart.js": "^2.9.3",
-    "next": "^9.5.4",
-    "react": "^16.13.1",
+    "next": "^10.0.0",
+    "react": "^17.0.1",
     "react-chartjs-2": "^2.10.0",
-    "react-dom": "^16.13.1"
+    "react-dom": "^17.0.1"
   },
   "devDependencies": {
     "@types/node": "^14.10.1",

@@ -58,6 +58,12 @@ const Price = () => {
         responsive: true,
         maintainAspectRatio: false,
         legend: { display: false },
+        elements: {
+          line: { borderWidth: 4.3, borderCapStyle: "round" },
+          point: { radius: 0 },
+        },
+        tooltips: { mode: "index", intersect: false },
+        hover: { mode: "nearest", intersect: true },
         scales: {
           xAxes: [{ gridLines: { display: false } }],
           yAxes: [

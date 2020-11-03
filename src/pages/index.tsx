@@ -5,7 +5,11 @@ const Home = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    new Verto().getTokens().then((res) => setData(res.reverse()));
+    new Verto().popularTokens().then((res) => {
+      new Verto().getTokens().then((tokens) => {
+        setData([...res, ...tokens]);
+      });
+    });
   }, []);
 
   return (
